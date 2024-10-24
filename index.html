@@ -10,27 +10,23 @@
             justify-content: center;
             align-items: center;
             height: 100vh;
-            background-color: #6e9777; /* Background color */
+            background-color: #6e9777; /* Whole background color */
             margin: 0; /* Remove default margin */
-            font-family: Arial, sans-serif; /* Set a default font */
         }
 
         .card-container {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Responsive grid */
+            grid-template-columns: repeat(3, 200px); /* 3 columns by default */
             gap: 20px;
-            max-width: 800px; /* Limit the container width */
-            width: 100%; /* Make it responsive */
         }
 
         .card {
-            width: 100%; /* Make card width responsive */
+            width: 200px; /* Card width */
             height: 250px; /* Card height */
             perspective: 1000px;
             border: 2px solid black;
             border-radius: 5px;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-            cursor: pointer; /* Change cursor on hover */
         }
 
         .card-inner {
@@ -55,82 +51,89 @@
             justify-content: center;
             align-items: center;
             font-size: 2em;
+            cursor: pointer;
         }
 
         .card-front {
-            background-color: rgb(255, 255, 255); /* White background */
-            background-size: contain; /* Scale image to fit */
+            background-color: rgb(255, 255, 255);
+            background-size: contain;
             background-position: center;
-            background-repeat: no-repeat; /* Prevent repetition */
+            background-repeat: no-repeat;
         }
 
         .card-back {
-            background-color: rgb(255, 255, 255); /* White background for backs */
+            background-color: rgb(255, 255, 255);
             transform: rotateY(180deg);
-            color: orange; /* Text color for rewards */
-            font-weight: bold; /* Make text bold */
-            -webkit-text-stroke: 1px black; /* Add black outline */
+            color: orange;
+            font-weight: bold;
+            -webkit-text-stroke: 1px black;
         }
 
-        /* Responsive font size */
-        @media (max-width: 600px) {
-            .card-back {
-                font-size: 1.5em; /* Smaller font for mobile */
+        /* Media Queries for Responsiveness */
+        @media (max-width: 800px) {
+            .card-container {
+                grid-template-columns: repeat(2, 1fr); /* 2 columns for medium screens */
+            }
+        }
+
+        @media (max-width: 500px) {
+            .card-container {
+                grid-template-columns: repeat(1, 1fr); /* 1 column for small screens */
             }
         }
     </style>
 </head>
 <body>
-    <div class="card-container" role="region" aria-label="Card Flipping Game">
-        <div class="card" data-value="1" tabindex="0">
+    <div class="card-container">
+        <div class="card" data-value="1">
             <div class="card-inner">
                 <div class="card-front" style="background-image: url('Uroterra-product-web-site-terrapia-removebg-preview.png');"></div>
                 <div class="card-back">1</div>
             </div>
         </div>
-        <div class="card" data-value="2" tabindex="0">
+        <div class="card" data-value="2">
             <div class="card-inner">
-                <div class="card-front" style="background-image: url('Herbs_for_health-removebg-preview (1).png');"></div>
+                <div class="card-front" style="background-image: url('Herbs_for_health-removebg-preview__1_-removebg-preview.png');"></div>
                 <div class="card-back">2</div>
             </div>
         </div>
-        <div class="card" data-value="3" tabindex="0">
+        <div class="card" data-value="3">
             <div class="card-inner">
                 <div class="card-front" style="background-image: url('Spiruterra-product-web-site-terrapia-removebg-preview.png');"></div>
                 <div class="card-back">3</div>
             </div>
         </div>
-        <div class="card" data-value="4" tabindex="0">
+        <div class="card" data-value="4">
             <div class="card-inner">
-                <div class="card-front" style="background-image: url('Herbs_for_health-removebg-preview (1).png');"></div>
+                <div class="card-front" style="background-image: url('Herbs_for_health-removebg-preview__1_-removebg-preview.png');"></div>
                 <div class="card-back">4</div>
             </div>
         </div>
-        <div class="card" data-value="5" tabindex="0">
+        <div class="card" data-value="5">
             <div class="card-inner">
-                <div class="card-front" style="background-image: url('Herbs_for_health-removebg-preview (1).png');"></div>
+                <div class="card-front" style="background-image: url('Herbs_for_health-removebg-preview__1_-removebg-preview.png');"></div>
                 <div class="card-back">5</div>
             </div>
         </div>
-        <div class="card" data-value="6" tabindex="0">
+        <div class="card" data-value="6">
             <div class="card-inner">
-                <div class="card-front" style="background-image: url('Herbs_for_health-removebg-preview (1).png');"></div>
+                <div class="card-front" style="background-image: url('Herbs_for_health-removebg-preview__1_-removebg-preview.png');"></div>
                 <div class="card-back">6</div>
             </div>
         </div>
-        <div class="card" data-value="7" tabindex="0">
+        <div class="card" data-value="7">
             <div class="card-inner">
                 <div class="card-front" style="background-image: url('Imunoterra-product_website-600x600-1-removebg-preview.png');"></div>
                 <div class="card-back">7</div>
             </div>
         </div>
-        <div class="card" data-value="8" tabindex="0">
+        <div class="card" data-value="8">
             <div class="card-inner">
-                <div class="card-front" style="background-image: url('Herbs_for_health-removebg-preview (1).png');"></div>
+                <div class="card-front" style="background-image: url('Herbs_for_health-removebg-preview__1_-removebg-preview.png');"></div>
                 <div class="card-back">8</div>
             </div>
         </div>
-        <div class="card" data-value="9" tabindex="0">
+        <div class="card" data-value="9">
             <div class="card-inner">
                 <div class="card-front" style="background-image: url('Detoxiterra-product_website-removebg-preview.png');"></div>
                 <div class="card-back">9</div>
@@ -150,21 +153,14 @@
         let flippedCard = null; // Track the currently flipped card
 
         cards.forEach(card => {
-            card.addEventListener('click', flipCard);
-            card.addEventListener('keypress', (e) => {
-                if (e.key === 'Enter') {
-                    flipCard.call(card);
-                }
+            card.addEventListener('click', () => {
+                if (flippedCard) return; // If a card is already flipped, do nothing
+                card.classList.toggle('flipped');
+                const randomReward = rewards[Math.floor(Math.random() * rewards.length)];
+                card.querySelector('.card-back').textContent = randomReward; // Set random reward text
+                flippedCard = card; // Set the currently flipped card
             });
         });
-
-        function flipCard() {
-            if (flippedCard) return; // If a card is already flipped, do nothing
-            this.classList.toggle('flipped');
-            const randomReward = rewards[Math.floor(Math.random() * rewards.length)];
-            this.querySelector('.card-back').textContent = randomReward; // Set random reward text
-            flippedCard = this; // Set the currently flipped card
-        }
     </script>
 </body>
 </html>
